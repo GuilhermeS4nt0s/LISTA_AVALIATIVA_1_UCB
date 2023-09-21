@@ -1,59 +1,54 @@
-//Questao 1
-
-//Faca um programa que verifique se em determinado ano ocorreram Jogos Olimpicos de Verao (da Era
-//Moderna) e/ou Copa do Mundo de Futebol.//
-
-//Os anos de realizacao dos dois eventos podem ser encontrados nos seguintes links:
-//Jogos Olimpicos de Verao
-
-//Entrada
-
-//A entrada e um valor inteiro positivo X (1800 > X > 2022) representando um ano.//
-
-//Saida
-
-//A saida do programa deve mostrar se ocorreu algum dos eventos no ano inserido X, da seguinte forma:
-
-//- Caso nao tenha ocorrido nenhum dos eventos, deve ser mostrada a seguinte mensagem: ''Nao houve
-//Jogos Olimpicos de Verao ou Copa do Mundo no ano de X.'';//
-
-//- Caso tenha ocorrido Olimpiadas no ano inserido, deve ser mostrada uma mensagem no seguinte
-//formato: 'Os Jogos Olimpicos de Verao ocorreram no ano de X.';//
-
-//- Caso tenha ocorrido Copa do Mundo no ano inserido, deve ser mostrada uma mensagem no seguinte
-//formato: 'A Copa do Mundo de Futebol ocorreu no ano de X.';
-
-//Nao se esqueca de imprimir as mensagens com uma quebra de linha ao final.
-
-//Exemplo de entrada Saida//
-
-//1800 | Nao houve Jogos Olimpicos de Verao ou Copa do
-//Mundo no ano de 1800.//
-//1934 | A Copa do Mundo de Futebol ocorreu no ano de//
-
-//2016 | Os Jogos Olimpicos de Verao ocorreram no ano de//
-
-// ---------------------------//
-
-//COPA DO MUNDO OCORREU MENOS NOS ANOS 1942 e 1946//
-
-//COPA DO MUNDO OCORREU EM 1930//
-
-//Os Jogos Olimpicos de Verao  ocorreram em 1896//
-
-// if(nmrdacopa >= 1800)
-//Nao houve Jogos Olimpicos de Verao ou Copa do
-//Mundo no ano de 1800.
-
 
 #include <stdio.h>
 
-int main(){
-
-    int numerodequandoocorreuacopa = 1930 >= 2022;
-    int numerodequandoocorreuosjogosolimpicos =  1896 >= 2021;
-    int numerodequandonaoocorreuacopa = 1800 >= 1929;
-    int numerodequandonaoocorreuosjogosolimpicos = 1 >= 1895; 
-
-        printf("insira uma operacao:\n");
+int main() {
+    // Ano desejado
+    int ano;
+    
+    // Lista de anos em que ocorreram Jogos Olímpicos de Verão
+    int jogos_olimpicos_verao[] = {1896, 1900, 1904, 1908, 1912, 1920, 1924, 1928, 1932, 1936, 1948, 1952, 1956, 1960, 1964, 1968, 1972, 1976, 1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020};
+    
+    // Tamanho da lista de anos dos Jogos Olímpicos de Verão
+    int tamanho_jogos_olimpicos_verao = sizeof(jogos_olimpicos_verao) / sizeof(jogos_olimpicos_verao[0]);
+    
+    // Lista de anos em que ocorreu a Copa do Mundo de Futebol
+    int copa_do_mundo[] = {1930, 1934, 1938, 1950, 1954, 1958, 1962, 1966, 1970, 1974, 1978, 1982, 1986, 1990, 1994, 1998, 2002, 2006, 2010, 2014, 2018};
+    
+    // Tamanho da lista de anos da Copa do Mundo de Futebol
+    int tamanho_copa_do_mundo = sizeof(copa_do_mundo) / sizeof(copa_do_mundo[0]);
+    
+    // Solicita ao usuário que insira o ano desejado
+    printf("Digite o ano que deseja verificar: ");
+    scanf("%d", &ano);
+    
+    // Verifica se ocorreu a Copa do Mundo de Futebol no ano desejado
+    int ocorreu_copa_do_mundo = 0;
+    for (int i = 0; i < tamanho_copa_do_mundo; i++) {
+        if (ano == copa_do_mundo[i]) {
+            ocorreu_copa_do_mundo = 1;
+            break;
+        }
+    }
+    
+    // Verifica se ocorreram Jogos Olímpicos de Verão no ano desejado
+    int ocorreram_jogos_olimpicos_verao = 0;
+    for (int i = 0; i < tamanho_jogos_olimpicos_verao; i++) {
+        if (ano == jogos_olimpicos_verao[i]) {
+            ocorreram_jogos_olimpicos_verao = 1;
+            break;
+        }
+    }
+    
+    // Exibe os resultados
+    if (ocorreu_copa_do_mundo) {
+        printf("A Copa do Mundo de Futebol ocorreu em %d.\n", ano);
+    }
+    if (ocorreram_jogos_olimpicos_verao) {
+        printf("Os Jogos Olímpicos de Verão ocorreram em %d.\n", ano);
+    }
+    if (!ocorreu_copa_do_mundo && !ocorreram_jogos_olimpicos_verao) {
+        printf("Não ocorreu a Copa do Mundo de Futebol nem os Jogos Olímpicos de Verão em %d.\n", ano);
+    }
+    
+    return 0;
 }
