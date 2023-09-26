@@ -2,24 +2,24 @@
 #include <stdlib.h>
 
 int main() {
-  int numero, numeroCopia;
+  int number, numbertwo;
   int somadigitos = 0;
 
   printf("Digite um numero inteiro: ");
-  scanf("%d", &numero);
+  scanf("%d", &number);
 
-  if (numero % 2 == 0) {
+  if (number % 2 == 0) {
     printf("O numero eh par\n");
   } else {
     printf("O numero eh impar\n");
   }
-  numeroCopia = numero;
-  while (numeroCopia > 0) {
-    somadigitos += numeroCopia % 10;
-    numeroCopia /= 10;
+  numbertwo = number;
+  while (numbertwo > 0) {
+    somadigitos += numbertwo % 10;
+    numbertwo /= 10;
   }
 
-  printf("A soma dos digitos do numero %d eh %d.\n", numero, somadigitos);
+  printf("A soma dos digitos do numero %d eh %d.\n", number, somadigitos);
 
   return 0;
 }
