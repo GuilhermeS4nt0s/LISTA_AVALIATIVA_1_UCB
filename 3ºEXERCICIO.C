@@ -2,15 +2,15 @@
 #include <stdlib.h>
 
 int main() {
-    int senha, senha_valida;
+    int senha, senha_correta;
 
     scanf("%d", &senha);
     printf("senha cadastrada: %d\n", senha);
 
     while (1){
-        scanf("%d", &senha_valida);
+        scanf("%d", &senha_correta);
 
-        if (senha_valida == senha) {
+        if (senha_correta == senha) {
             printf("Senha valida!\n");
             break;
         } else {
