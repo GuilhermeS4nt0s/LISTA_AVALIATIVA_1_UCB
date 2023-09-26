@@ -1,24 +1,24 @@
 int main(){
    
     char nivel;
-    float salario, aumento;
+    float salary, aumento;
 
     scanf("%c", &nivel);
-    scanf("%f", &salario);
+    scanf("%f", &salary);
     
     switch (nivel){
         case 'a':
-            aumento = salario * 0.05;
+            aumento = salary * 0.05;
             break;
         case 'b':
-            aumento = salario * 0.07;
+            aumento = salary * 0.07;
             break;
         case 'c':
-            aumento = salario * 0.08;
+            aumento = salary * 0.08;
             break;
     }
     
-    printf("R$ %.2f\n", salario + aumento);
+    printf("R$ %.2f\n", salary + aumento);
 
     return 0;
     }
