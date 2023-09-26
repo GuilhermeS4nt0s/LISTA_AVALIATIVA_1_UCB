@@ -1,24 +1,24 @@
 #include <stdio.h>
 
 int main() {
-    int a, b;
+    int valueone, valuetwo;
     printf("digite o primeiro numero\n");
-    scanf("%d %d", &a, &b);
-    if (a > b) {
-         printf("%d eh maior que %d\n ", a ,b);
-        if (a % b == 0) {
-            printf("%d eh multiplo de %d\n",a, b);
+    scanf("%d %d", &valueone, &valuetwo);
+    if (valueone > valuetwo) {
+         printf("%d eh maior que %d\n ", valueone ,valuetwo);
+        if (valueone % valuetwo == 0) {
+            printf("%d eh multiplo de %d\n",valueone, valuetwo);
         } else {
-             printf("%d nao eh multiplo de %d\n",a, b);
+             printf("%d nao eh multiplo de %d\n",valueone, valuetwo);
         }
-    } else if (a< b)
+    } else if (valueone< b)
    
      {
-         printf("%d eh maior que %d\n ", b ,a);
-        if (b % a == 0) {
-            printf("%d eh multiplo de %d\n",b, a);
+         printf("%d eh maior que %d\n ", valuetwo ,valueone);
+        if (valuetwo % valueone == 0) {
+            printf("%d eh multiplo de %d\n",valuetwo, valueone);
         } else {
-           printf("%d nao eh multiplo de %d\n",b, a);
+           printf("%d nao eh multiplo de %d\n",valuetwo, valueone);
         }
        
     }else{
