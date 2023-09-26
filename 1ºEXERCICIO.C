@@ -33,7 +33,7 @@ int main() {
     // Verifica se ocorreram Jogos Olímpicos de Verão no ano desejado
     int ocorreram_jogos_olimpicos_verao = 0;
     for (int i = 0; i < tamanho_dos_jogos_olimpicos_de_verao; i++) {
-        if (ano == jogos_olimpicos_verao[i]) {
+        if (ano == jogos_olimpicos_de_verao[i]) {
             ocorreram_jogos_olimpicos_verao = 1;
             break;
         }
