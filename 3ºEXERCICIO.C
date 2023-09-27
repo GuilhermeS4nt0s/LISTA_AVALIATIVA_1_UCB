@@ -11,12 +11,10 @@ int main() {
         scanf("%d", &senha_correta);
 
         if (senha_correta == senha) {
-            printf("Senha valida!\n");
+            printf("senha valida!\n");
             break;
         } else {
-            printf("Senha invalida!\n");
+            printf("senha invalida!\n");
         }
     }
-
-    return 0;
 }

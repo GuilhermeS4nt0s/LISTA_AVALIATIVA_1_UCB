@@ -8,17 +8,20 @@ int main(){
     
     switch (nivel){
         case 'a':
-            aumento = salary * 0.05;
+            aumento = salary  + (salary * 0.05);
+            printf("R$ %.2f\n", aumento);
             break;
         case 'b':
-            aumento = salary * 0.07;
+            aumento = salary  + (salary * 0.07);
+            printf("R$ %.2f\n", aumento);
             break;
         case 'c':
-            aumento = salary * 0.08;
+            aumento = salary + (salary * 0.08);
+            printf("R$ %.2f\n", aumento);
             break;
     }
     
-    printf("R$ %.2f\n", salary + aumento);
+    
 
     return 0;
     }

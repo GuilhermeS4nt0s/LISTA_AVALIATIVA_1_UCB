@@ -5,13 +5,13 @@ int main() {
   int number, numbertwo;
   int somadigitos = 0;
 
-  printf("Digite um numero inteiro: ");
+  //printf("Digite um numero inteiro: ");
   scanf("%d", &number);
 
   if (number % 2 == 0) {
-    printf("O numero eh par\n");
+    printf("%d eh par\n", number);
   } else {
-    printf("O numero eh impar\n");
+    printf("%d eh impar\n", number);
   }
   numbertwo = number;
   while (numbertwo > 0) {
@@ -19,7 +19,7 @@ int main() {
     numbertwo /= 10;
   }
 
-  printf("A soma dos digitos do numero %d eh %d.\n", number, somadigitos);
+  printf("A soma dos algarismos de %d eh %d\n", number, somadigitos);
 
   return 0;
 }
